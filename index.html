@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+
+</head>
+<body class="md:container mx-auto">
+    <nav>
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                  <li><a>Item 1</a></li>
+                  <li>
+                    <a>Parent</a>
+                    <ul class="p-2">
+                      <li><a>Submenu 1</a></li>
+                      <li><a>Submenu 2</a></li>
+                    </ul>
+                  </li>
+                  <li><a>Item 3</a></li>
+                </ul>
+              </div>
+                <div>
+                    <img src="images/logo.webp">
+                </div>
+                <h1 class="text-2xl font-bold">Peddy</h1>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="btn"> Button</a>
+            </div>
+          </div>
+
+
+           
+    </nav>
+    <main>
+        <section>
+            <h3 class="text-gray-600 text-center  text-2xl py-4">Bringing families together!</h3>
+            <h1 class="text-5xl font-bold text-center py-4">Your Path to adoption</br>Starts here</h1>
+            <p class="text-xl text-gray-500 text-center py-4">Looking for bonding stablishment between your two best friend once are dog</br>And another one are cat</p>
+            <div class="text-center"><button class="btn py-4 btn-info text-white"><a href="#adopt">View More</a></button></div>
+        </section>
+        <div class="text-center item-center justify-center mt-[100px]">
+            <img class="bt-10" src="images/pet.webp">
+        </div>
+
+        <section>
+            <h1 id="adopt" class="text-4xl font-bold text-center  mt-40 mb-10">Adopt your best friend</h1>
+            <p class="text-center text-gray-500 ">Weather cat or dog our best pet rely on those</br>Because the are symbol of love,loyalty & security</p>
+        </section>
+
+        <section class="flex flex-row justify-between mt-20">
+            <button onclick="loadDogs()" class="btn btn-outline btn-info">Dogs</button>
+            <button onclick="loadCats()" class="btn btn-outline btn-success">Cats</button>
+            <button onclick="loadRabits()" class="btn btn-outline btn-warning">Rabbits</button>
+            <button onclick="loadBirds()" class="btn btn-outline btn-error">Birds</button>
+        </section>
+
+        <section class="flex flex-row justify-between my-10">
+            <h3 class="text-bold text-3xl font-bold ">Best Deals for you</h3>
+            <bytton class="btn btn-active btn-accent">Sort by prize</bytton>
+        </section>
+
+        <section class="flex flex-row max-w-[800px]">
+            <div id="card-container">
+                
+            </div>
+            <div id="dog-container">
+                
+            </div>
+            <div id="cat-container">
+                
+            </div>
+            <div id="rabit-container">
+                
+            </div>
+            <div id="bird-container">
+              
+            </div>
+
+
+            <div class="flex flex-row max-w-1/3">
+
+            </div>
+        </section>
+        <footer>
+            
+        </footer>
+    </main>
+
+
+
+
+    <script src="javascript/js.js"></script>
+</body>
+</html>
