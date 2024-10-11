@@ -1,17 +1,14 @@
 
+
+
 // All show:
 const loadAllResult = async() => {
     
     const response = await fetch('https://openapi.programming-hero.com/api/peddy/pets');
     const data = await response.json();
     showAllResult(data.pets)
-       
-
-    
 
 }
-
-
 
 const showAllResult = (pets) => {
    
@@ -34,7 +31,7 @@ const showAllResult = (pets) => {
                     <P>gender:  ${pet.gender}</p>
                     <P>Price:  $${pet.price}</p>
                 <div class=" flex flex-row justify-between">
-                    <button  onclick="handleLike(pet)" class="btn like btn-outline btn-success">Like</button>
+                    <button  onclick="handleLike()" class="btn like btn-outline btn-success">Like</button>
                     <button class="btn  btn-outline btn-success">Adopt</button>
                     <button class="btn  btn-outline btn-success" >Details</button>
                 </div>
@@ -243,11 +240,3 @@ const handleLike = (pets) => {
         console.log('hello ziu')
 
 }
-
-//details:
-
- const loadDetails = async() => {
-    my_modal_1.showModal();
- }
-
- Document.getElementByclassNames('dt').onclick="my_modal_1.showModal()"
