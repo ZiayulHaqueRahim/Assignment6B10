@@ -5,20 +5,22 @@ const loadAllResult = async() => {
     const response = await fetch('https://openapi.programming-hero.com/api/peddy/pets');
     const data = await response.json();
     showAllResult(data.pets)
+       
 
+    
 
 }
 
 
 
 const showAllResult = (pets) => {
-    
+   
     const petContainer = document.getElementById('card-container')
     pets.forEach((pet) => {
         console.log(pet)
         const div = document.createElement('div');
         div.classList = 'max-w-30';
-        petContainer.classList = 'grid grid-cols-3 gap-2'
+        petContainer.classList = 'grid grid-cols-1 md:grid-cols-3 gap-2'
         div.innerHTML = `
             <div class="card bg-base-100 py-3 m-3">
                     <figure class=" pt-3">
@@ -32,16 +34,15 @@ const showAllResult = (pets) => {
                     <P>gender:  ${pet.gender}</p>
                     <P>Price:  $${pet.price}</p>
                 <div class=" flex flex-row justify-between">
-                    <button class="btn btn-outline btn-success">Like</button>
-                    <button class="btn btn-outline btn-success">Adopt</button>
-                    <button class="btn btn-outline btn-success">Details</button>
+                    <button  onclick="handleLike(pet)" class="btn like btn-outline btn-success">Like</button>
+                    <button class="btn  btn-outline btn-success">Adopt</button>
+                    <button class="btn  btn-outline btn-success" >Details</button>
                 </div>
             </div>
         `
         petContainer.appendChild(div)
+
     });
-   
-    
 
 }
 
@@ -80,16 +81,16 @@ loadAllResult();
                     <P>gender:  ${dog.gender}</p>
                     <P>Price:  $${dog.price}</p>
                 <div class=" flex flex-row justify-between">
-                    <button class="btn btn-outline btn-success">Like</button>
-                    <button class="btn btn-outline btn-success">Adopt</button>
-                    <button class="btn btn-outline btn-success">Details</button>
+                    <button onclick="handleLike()" class="btn like btn-outline btn-success">Like</button>
+                    <button class="btn  btn-outline btn-success">Adopt</button>
+                    <button class="btn  btn-outline btn-success">Details</button>
                 </div>
             </div>
         `
         dogContainer.appendChild(section)
     });
 
-    dogContainer.classList = 'grid grid-cols-3 gap-2'
+    dogContainer.classList = 'grid  grid-cols-1 md:grid-cols-3 gap-2'
     
  }
 
@@ -127,16 +128,16 @@ loadAllResult();
                     <P>gender:  ${cat.gender}</p>
                     <P>Price:  $${cat.price}</p>
                 <div class=" flex flex-row justify-between">
-                    <button class="btn btn-outline btn-success">Like</button>
-                    <button class="btn btn-outline btn-success">Adopt</button>
-                    <button class="btn btn-outline btn-success">Details</button>
+                    <button onclick="handleLike()" class="btn like btn-outline btn-success">Like</button>
+                    <button class="btn  btn-outline btn-success">Adopt</button>
+                    <button class="btn  btn-outline btn-success">Details</button>
                 </div>
             </div>
         `
         catContainer.appendChild(section)
     });
 
-    catContainer.classList = 'grid grid-cols-3 gap-2'
+    catContainer.classList = 'grid grid-cols-1 md:grid-cols-3 gap-2'
     
  }
 
@@ -174,7 +175,7 @@ rabits.forEach((rabit) => {
                 <P>gender:  ${rabit.gender}</p>
                 <P>Price:  $${rabit.price}</p>
             <div class=" flex flex-row justify-between">
-                <button class="btn btn-outline btn-success">Like</button>
+                <button onclick='handleLike()' class="btn like btn-outline btn-success">Like</button>
                 <button class="btn btn-outline btn-success">Adopt</button>
                 <button class="btn btn-outline btn-success">Details</button>
             </div>
@@ -183,7 +184,7 @@ rabits.forEach((rabit) => {
     rabitContainer.appendChild(section)
 });
 
-rabitContainer.classList = 'grid grid-cols-3 gap-2'
+rabitContainer.classList = 'grid grid-cols-1 md:grid-cols-3 gap-2'
 
 }
 
@@ -216,5 +217,37 @@ const showBirds = (birds) => {
         birdContainer.appendChild(section)
     };
     
+    
    
     
+//like button :
+
+const handleLike = (pets) => {
+       console.log(pets)
+        const likeContainer = document.getElementById('like-container')
+        const element = document.createElement('div')
+        element.classList = 'max-w-10'
+         likeContainer.classList = 'grid grid-cols-2 gap-2'
+         element.innerHTML =`
+            <div class="card bg-base-100 py-3 m-3">
+                    <figure class=" pt-3">
+                        <img
+                        src="${pets}"
+                        class="rounded-xl" />
+                    </figure>
+                    
+            </div>
+         `
+
+        likeContainer.appendChild(element)
+        console.log('hello ziu')
+
+}
+
+//details:
+
+ const loadDetails = async() => {
+    my_modal_1.showModal();
+ }
+
+ Document.getElementByclassNames('dt').onclick="my_modal_1.showModal()"
